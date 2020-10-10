@@ -80,7 +80,7 @@ const ProductPage: React.FC = (props) => {
 
     // useEffectを利用してFirestoreからデータの一覧を取得．
     useEffect(() => {
-        const result = getFiguresFromFirestore();
+        getFiguresFromFirestore();
     }, [props]);
     console.log(FigureList)
 

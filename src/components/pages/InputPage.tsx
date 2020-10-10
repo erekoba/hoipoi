@@ -38,7 +38,7 @@ const InputPage: React.FC = (props) => {
 
     // Firestoreにデータを送信する関数
     const postDataToFirestore = async (collectionName: any, postData: any) => {
-        const addedData = await firebase
+        await firebase
             .firestore()
             .collection(collectionName)
             .add(postData);
@@ -57,7 +57,7 @@ const InputPage: React.FC = (props) => {
             user: user,
             Payment: payment
         };
-        const addedData = await postDataToFirestore("reserves", postData);
+        await postDataToFirestore("reserves", postData);
         setfigureID("");
         setfigureName("");
         setCapture("");
