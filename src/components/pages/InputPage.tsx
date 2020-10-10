@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState } from "react";
 import firebase from "../firebase";
 import GenericTemplate from "../templates/GenericTemplate";
 import { makeStyles } from "@material-ui/core/styles";

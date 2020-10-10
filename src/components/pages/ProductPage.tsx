@@ -138,7 +138,7 @@ const ProductPage: React.FC = (props) => {
                     <TableBody>
                         {
                             FigureList[0] === undefined
-                                ? <a></a>
+                                ? <a>ああ</a>
                                 : FigureList?.map((x) => (
                                     <TableRow key={x.id}>
                                         <TableCell component="th" scope="row">
