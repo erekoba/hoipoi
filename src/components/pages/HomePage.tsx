@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState } from "react";
 import firebase from "../firebase";
 import GenericTemplate from "../templates/GenericTemplate";
 import { makeStyles } from "@material-ui/core/styles";
@@ -9,16 +9,6 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-
-const createData = (
-    name: string,
-    category: string,
-    weight: number,
-    price: number
-) => {
-    return { name, category, weight, price };
-};
-
 
 
 const useStyles = makeStyles({
@@ -32,7 +22,6 @@ const HomePage: React.FC = (props) => {
 
     const classes = useStyles();
 
-    const [figureID, setfigureID] = useState("");
     const [figureName, setfigureName] = useState("");
     const [capture, setCapture] = useState("");
     const [price, setPrice] = useState("");
@@ -46,7 +35,6 @@ const HomePage: React.FC = (props) => {
             .firestore()
             .collection(collectionName)
             .add(postData);
-        return addedData;
     };
 
     // submitボタンクリック時の処理

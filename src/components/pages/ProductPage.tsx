@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
 import firebase from "../firebase";
 import GenericTemplate from "../templates/GenericTemplate";
 import { makeStyles } from "@material-ui/core/styles";
@@ -9,17 +9,6 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-
-const createData = (
-    name: string,
-    category: string,
-    weight: number,
-    price: number
-) => {
-    return { name, category, weight, price };
-};
-
-
 
 const useStyles = makeStyles({
     table: {
@@ -138,7 +127,7 @@ const ProductPage: React.FC = (props) => {
                     <TableBody>
                         {
                             FigureList[0] === undefined
-                                ? <a>ああ</a>
+                                ? <p></p>
                                 : FigureList?.map((x) => (
                                     <TableRow key={x.id}>
                                         <TableCell component="th" scope="row">

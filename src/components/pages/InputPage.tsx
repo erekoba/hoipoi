@@ -42,7 +42,6 @@ const InputPage: React.FC = (props) => {
             .firestore()
             .collection(collectionName)
             .add(postData);
-        return addedData;
     };
 
     // submitボタンクリック時の処理
@@ -205,7 +204,7 @@ const InputPage: React.FC = (props) => {
                 <p>
 
                     {Figure[0] === undefined
-                        ? <a>検索結果はありません</a>
+                        ? <p>検索結果はありません</p>
                         : Figure?.map((x) => (
                             <label>
                                 <input
