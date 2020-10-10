@@ -56,7 +56,7 @@ const HomePage: React.FC = (props) => {
             Distributor: distributor
         };
         const addedData = await postDataToFirestore("figures", postData);
-        setfigureID("");
+
         setfigureName("");
         setCapture("");
         setPrice("");
